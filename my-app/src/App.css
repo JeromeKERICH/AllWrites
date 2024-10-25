@@ -1,0 +1,111 @@
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+}
+
+.navbar-logo img {
+  width: 100px;
+}
+
+/* Navigation Links for Desktop */
+.navbar-links {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-links li {
+  margin: 0;
+}
+
+.navbar-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 16px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-links li a:hover {
+  background-color: #555;
+  border-radius: 4px;
+}
+
+/* Hamburger Icon for Mobile */
+.navbar-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger {
+  font-size: 30px;
+  color: white;
+}
+
+/* Sidebar Styles for Mobile */
+.sidebar {
+  position: fixed;
+  top: 50px;
+  left: -200px;
+  width: 200px;
+  height: 50%;
+  background-color: #333;
+  padding: 0px;
+  transition: left 0.3s ease;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar .close-btn {
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+.sidebar-links {
+  list-style-type: none;
+  padding: 20px;
+ text-align: center;
+}
+
+.sidebar-links li {
+  margin: 20px 0;
+}
+
+.sidebar-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+  text-align: center;
+  
+}
+
+.sidebar-links li a:hover {
+  background-color: #555;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .navbar-links {
+    display: none; /* Hide links on small screens */
+  }
+
+  .navbar-toggle {
+    display: block; /* Show the hamburger icon */
+  }
+
+  .sidebar-links li a {
+    font-size: 20px;
+  }
+}
